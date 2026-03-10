@@ -1,0 +1,307 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Donate";
+}
+
+<!-- ─── HERO BANNER ─── -->
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_6.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span>
+                    <span>Donate</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    Make a Donation
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ─── MAIN CONTENT ─── -->
+<section class="ftco-section">
+    <div class="container">
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 heading-section ftco-animate text-center">
+                <span class="subheading">Give Today</span>
+                <h2 class="mb-2">Your Donation Makes a Difference</h2>
+                <p>Choose a cause close to your heart and help us change lives.</p>
+            </div>
+        </div>
+
+        @* ── LOGIN PROMPT from TempData ── *@
+        @if (TempData["ReturnMessage"] != null)
+        {
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="alert alert-warning ftco-animate">
+                        @TempData["ReturnMessage"]
+                    </div>
+                </div>
+            </div>
+        }
+
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-9">
+
+                @* ── ERROR MESSAGE ── *@
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger ftco-animate">
+                        <span class="icon-warning mr-2"></span> @ViewBag.Error
+                    </div>
+                }
+
+                <form method="post" action="@Url.Action("Index", "Donation")" class="ftco-animate" id="donationForm">
+
+                    <div class="row">
+
+                        @* ── LEFT COLUMN ── *@
+                        <div class="col-md-6 pr-md-4">
+
+                            <h5 class="mb-4" style="color:#f86f2d; font-family:'Dosis',sans-serif;">
+                                Donation Details
+                            </h5>
+
+                            @* CAUSE SELECTION *@
+                            <div class="form-group">
+                                <label style="font-family:'Dosis',sans-serif; color:#000;">
+                                    Select a Cause *
+                                </label>
+                                <select name="cause" class="form-control" required>
+                                    <option value="">-- Choose a Cause --</option>
+                                    <option value="Children">Children in Need</option>
+                                    <option value="Education">Education Support</option>
+                                    <option value="Disabled">Support for Disabled</option>
+                                    <option value="Women">Women Empowerment</option>
+                                    <option value="Youth">Youth Development</option>
+                                    <option value="Elderly">Elderly Care</option>
+                                </select>
+                            </div>
+
+                            @* DONATION AMOUNT *@
+                            <div class="form-group">
+                                <label style="font-family:'Dosis',sans-serif; color:#000;">
+                                    Donation Amount ($) *
+                                </label>
+                                <input type="number"
+                                       name="amount"
+                                       class="form-control"
+                                       placeholder="Enter amount e.g. 50"
+                                       min="1"
+                                       step="0.01"
+                                       required />
+                            </div>
+
+                            @* QUICK AMOUNT BUTTONS *@
+                            <div class="form-group">
+                                <label style="font-family:'Dosis',sans-serif; color:#000;">
+                                    Quick Select Amount
+                                </label>
+                                <div>
+                                    <button type="button" class="btn btn-outline-primary mr-2 mb-2 quick-amount" data-amount="10">$10</button>
+                                    <button type="button" class="btn btn-outline-primary mr-2 mb-2 quick-amount" data-amount="25">$25</button>
+                                    <button type="button" class="btn btn-outline-primary mr-2 mb-2 quick-amount" data-amount="50">$50</button>
+                                    <button type="button" class="btn btn-outline-primary mr-2 mb-2 quick-amount" data-amount="100">$100</button>
+                                    <button type="button" class="btn btn-outline-primary mr-2 mb-2 quick-amount" data-amount="250">$250</button>
+                                </div>
+                            </div>
+
+                            @* CARD TYPE *@
+                            <div class="form-group">
+                                <label style="font-family:'Dosis',sans-serif; color:#000;">
+                                    Card Type *
+                                </label>
+                                <div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio"
+                                               name="cardType" id="creditCard"
+                                               value="Credit" required />
+                                        <label class="form-check-label" for="creditCard">
+                                            Credit Card
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio"
+                                               name="cardType" id="debitCard"
+                                               value="Debit" />
+                                        <label class="form-check-label" for="debitCard">
+                                            Debit Card
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        @* ── RIGHT COLUMN ── *@
+                        <div class="col-md-6 pl-md-4">
+
+                            <h5 class="mb-4" style="color:#f86f2d; font-family:'Dosis',sans-serif;">
+                                Card Details
+                            </h5>
+
+                            @* CARD HOLDER *@
+                            <div class="form-group">
+                                <label style="font-family:'Dosis',sans-serif; color:#000;">
+                                    Card Holder Name *
+                                </label>
+                                <input type="text"
+                                       name="cardHolder"
+                                       class="form-control"
+                                       placeholder="Name on card"
+                                       required />
+                            </div>
+
+                            @* CARD NUMBER *@
+                            <div class="form-group">
+                                <label style="font-family:'Dosis',sans-serif; color:#000;">
+                                    Card Number * (16 digits)
+                                </label>
+                                <input type="text"
+                                       name="cardNumber"
+                                       class="form-control"
+                                       placeholder="1234 5678 9012 3456"
+                                       maxlength="19"
+                                       id="cardNumberInput"
+                                       required />
+                            </div>
+
+                            @* EXPIRY AND CVV ROW *@
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label style="font-family:'Dosis',sans-serif; color:#000;">
+                                            Expiry Date *
+                                        </label>
+                                        <input type="text"
+                                               name="cardExpiry"
+                                               class="form-control"
+                                               placeholder="MM/YY"
+                                               maxlength="5"
+                                               id="cardExpiryInput"
+                                               required />
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label style="font-family:'Dosis',sans-serif; color:#000;">
+                                            CVV *
+                                        </label>
+                                        <input type="text"
+                                               name="cardCvv"
+                                               class="form-control"
+                                               placeholder="123"
+                                               maxlength="4"
+                                               required />
+                                    </div>
+                                </div>
+                            </div>
+
+                            @* DUMMY CARD NOTICE *@
+                            <div style="background:#fff8f5; border-left:4px solid #f86f2d;
+                                        padding:12px 16px; border-radius:0 4px 4px 0;
+                                        margin-bottom:20px;">
+                                <small style="color:gray;">
+                                    <span style="color:#f86f2d; font-weight:600;">
+                                        ⚠ Demo Mode:
+                                    </span>
+                                    This is a dummy payment form for demonstration
+                                    purposes. No real transaction will be processed.
+                                    Use any 16-digit number as your card number.
+                                </small>
+                            </div>
+
+                            @* SUBMIT BUTTON *@
+                            <div class="form-group mt-3">
+                                <input type="submit"
+                                       value="Donate Now"
+                                       class="btn btn-primary py-3 px-5" />
+                            </div>
+
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+@* ── CAUSES STRIP SECTION ── *@
+<section class="ftco-section ftco-no-pt" style="background:#f8f9fa;">
+    <div class="container">
+        <div class="row justify-content-center pt-5 mb-4">
+            <div class="col-md-8 heading-section ftco-animate text-center">
+                <span class="subheading">What We Support</span>
+                <h2 class="mb-2">Our Causes</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 ftco-animate mb-4">
+                <div class="text-center p-4"
+                     style="border:1px solid #f2f2f2; border-radius:4px; background:#fff;">
+                    <span class="flaticon-family" style="font-size:40px; color:#f86f2d; display:block; margin-bottom:15px;"></span>
+                    <h5 style="font-family:'Dosis',sans-serif;">Children in Need</h5>
+                    <p style="color:gray; font-size:14px;">Providing food, shelter and education to underprivileged children.</p>
+                </div>
+            </div>
+            <div class="col-md-4 ftco-animate mb-4">
+                <div class="text-center p-4"
+                     style="border:1px solid #f2f2f2; border-radius:4px; background:#fff;">
+                    <span class="flaticon-graduation-cap" style="font-size:40px; color:#f86f2d; display:block; margin-bottom:15px;"></span>
+                    <h5 style="font-family:'Dosis',sans-serif;">Education Support</h5>
+                    <p style="color:gray; font-size:14px;">Sponsoring education for those who cannot afford it.</p>
+                </div>
+            </div>
+            <div class="col-md-4 ftco-animate mb-4">
+                <div class="text-center p-4"
+                     style="border:1px solid #f2f2f2; border-radius:4px; background:#fff;">
+                    <span class="flaticon-volunteer" style="font-size:40px; color:#f86f2d; display:block; margin-bottom:15px;"></span>
+                    <h5 style="font-family:'Dosis',sans-serif;">Women Empowerment</h5>
+                    <p style="color:gray; font-size:14px;">Supporting women with skills, resources and opportunities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* ── CARD NUMBER FORMATTING + QUICK AMOUNT JS ── *@
+<script>
+    // Auto-format card number with spaces: 1234 5678 9012 3456
+    document.getElementById('cardNumberInput').addEventListener('input', function () {
+        var val = this.value.replace(/\D/g, '').substring(0, 16);
+        var formatted = val.match(/.{1,4}/g);
+        this.value = formatted ? formatted.join(' ') : val;
+    });
+
+    // Auto-format expiry date: MM/YY
+    document.getElementById('cardExpiryInput').addEventListener('input', function () {
+        var val = this.value.replace(/\D/g, '').substring(0, 4);
+        if (val.length >= 2) {
+            this.value = val.substring(0, 2) + '/' + val.substring(2);
+        } else {
+            this.value = val;
+        }
+    });
+
+    // Quick amount buttons fill the amount input
+    document.querySelectorAll('.quick-amount').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            document.querySelector('input[name="amount"]').value = this.dataset.amount;
+            // Highlight selected button
+            document.querySelectorAll('.quick-amount').forEach(function (b) {
+                b.classList.remove('btn-primary');
+                b.classList.add('btn-outline-primary');
+            });
+            this.classList.remove('btn-outline-primary');
+            this.classList.add('btn-primary');
+        });
+    });
+</script>

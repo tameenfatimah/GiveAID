@@ -1,0 +1,11 @@
+﻿@using image_uploading.Models
+@model Product
+
+<h1>Upload File</h1>
+<form onsubmit="@Url.Action("Index","Home")" method="post" enctype="multipart/form-data">
+    <input type="text" name="txtname" />
+    <br />
+    <input type="file" name="txtimage" />
+    <br />
+    <input type="submit" value="Upload" />
+</form>

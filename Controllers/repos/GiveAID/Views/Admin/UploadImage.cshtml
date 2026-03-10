@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Upload Image";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_6.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Dashboard", "Admin")">Dashboard</a></span>
+                    <span class="mr-2"><a href="@Url.Action("ManageGallery", "Admin")">Gallery</a></span>
+                    <span>Upload Image</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Upload Image</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger ftco-animate">@ViewBag.Error</div>
+                }
+
+                <form method="post" action="@Url.Action("UploadImage", "Admin")"
+                      enctype="multipart/form-data" class="ftco-animate">
+
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Select Image *</label>
+                        <input type="file" name="imageFile" class="form-control" accept="image/*" required />
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Caption</label>
+                        <input type="text" name="caption" class="form-control" placeholder="Image caption or title" />
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Category</label>
+                        <select name="category" class="form-control">
+                            <option value="General">General</option>
+                            <option value="Education">Education</option>
+                            <option value="Health">Health</option>
+                            <option value="Children">Children</option>
+                            <option value="Events">Events</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-4">
+                        <input type="submit" value="Upload Image" class="btn btn-primary py-3 px-5" />
+                        <a href="@Url.Action("ManageGallery", "Admin")" class="btn btn-outline-primary py-3 px-4 ml-2">Cancel</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

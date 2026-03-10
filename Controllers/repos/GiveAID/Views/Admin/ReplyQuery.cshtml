@@ -1,0 +1,71 @@
+﻿@model GiveAID.Models.Query
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Reply to Query";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_1.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Dashboard", "Admin")">Dashboard</a></span>
+                    <span class="mr-2"><a href="@Url.Action("ManageQueries", "Admin")">Queries</a></span>
+                    <span>Reply</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Reply to Query</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger ftco-animate">@ViewBag.Error</div>
+                }
+
+                @* ── ORIGINAL QUERY ── *@
+                <div class="ftco-animate mb-5"
+                     style="background:#f8f9fa; border-left:4px solid #f86f2d;
+                            padding:20px 25px; border-radius:0 4px 4px 0;">
+                    <h5 style="font-family:'Dosis',sans-serif; color:#000;">
+                        @Model.Subject
+                    </h5>
+                    <p style="color:gray; margin-bottom:8px;">@Model.Message</p>
+                    <small style="color:#bfbfbf;">
+                        Submitted: @Model.SubmittedAt.ToString("dd MMM yyyy, hh:mm tt")
+                        | User ID: @Model.UserId
+                    </small>
+                </div>
+
+                @* ── REPLY FORM ── *@
+                <form method="post"
+                      action="@Url.Action("ReplyQuery", "Admin", new { id = Model.QueryId })"
+                      class="ftco-animate">
+
+                    <div class="heading-section mb-4">
+                        <span class="subheading">Your Response</span>
+                        <h2>Write Your Reply</h2>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea name="adminReply" class="form-control" rows="6"
+                                  placeholder="Type your reply here..." required></textarea>
+                    </div>
+                    <div class="form-group mt-4">
+                        <input type="submit" value="Send Reply" class="btn btn-primary py-3 px-5" />
+                        <a href="@Url.Action("ManageQueries", "Admin")"
+                           class="btn btn-outline-primary py-3 px-4 ml-2">Cancel</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

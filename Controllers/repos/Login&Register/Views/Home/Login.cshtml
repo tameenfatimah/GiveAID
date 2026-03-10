@@ -1,0 +1,16 @@
+﻿@model Login_Register.Models.Users
+<h1>User Log-in</h1>
+
+<form onsubmit="@Url.Action("Login", "Home")" method="post">
+
+    <input type="email" name="Email" placeholder="Enter your email" required />
+    <br /><br />
+    <input type="password" name="Password" placeholder="Enter your password" required />
+    <br /><br />
+    <input type="submit" value="Log-in User" />
+
+    <p style="color:lightcoral">@ViewBag.Message</p>
+
+</form>
+
+<p>Don't have an account? <a href="@Url.Action("Register", "Home")">Register here</a></p>

@@ -1,0 +1,260 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\source\\repos\\GiveAID\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\helpcentre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\helpcentre.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\eventdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\eventdetail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\partners.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\partners.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\oursupporters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\oursupporters.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\achievements.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\achievements.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\career.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\career.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\ourteam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\ourteam.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\ourmission.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\ourmission.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\home\\whatwedo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\home\\whatwedo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|c:\\users\\hp\\source\\repos\\giveaid\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{263E68D9-9AA7-4B90-8744-A28AE8CF9B57}|GiveAID.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T10:50:22.558Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-02-22T10:57:36.929Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Models\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Models\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Models\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Models\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAkwBAAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-22T11:36:22.513Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAGgAAAAAAAAAAAAowHUAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-22T11:58:37.138Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAiwHAAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T16:12:44.311Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HelpCentre.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\HelpCentre.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\HelpCentre.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\HelpCentre.cshtml",
+              "RelativeToolTip": "Views\\Home\\HelpCentre.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAcwIAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:42:49.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EventDetail.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\EventDetail.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\EventDetail.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\EventDetail.cshtml",
+              "RelativeToolTip": "Views\\Home\\EventDetail.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAcwFcAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:42:37.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Partners.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\Partners.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Partners.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\Partners.cshtml",
+              "RelativeToolTip": "Views\\Home\\Partners.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwEAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:41:56.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OurSupporters.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\OurSupporters.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\OurSupporters.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\OurSupporters.cshtml",
+              "RelativeToolTip": "Views\\Home\\OurSupporters.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAUwD4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:41:39.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Achievements.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\Achievements.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Achievements.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\Achievements.cshtml",
+              "RelativeToolTip": "Views\\Home\\Achievements.cshtml",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAUwGUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:41:23.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Career.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\Career.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Career.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\Career.cshtml",
+              "RelativeToolTip": "Views\\Home\\Career.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAUwDsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:41:00.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OurTeam.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\OurTeam.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\OurTeam.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\OurTeam.cshtml",
+              "RelativeToolTip": "Views\\Home\\OurTeam.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAUwDoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:40:40.427Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "OurMission.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\OurMission.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\OurMission.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\OurMission.cshtml",
+              "RelativeToolTip": "Views\\Home\\OurMission.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAUwEkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:40:26.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "WhatWeDo.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\WhatWeDo.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\WhatWeDo.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\GiveAID\\Views\\Home\\WhatWeDo.cshtml",
+              "RelativeToolTip": "Views\\Home\\WhatWeDo.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAUwF4AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-25T16:40:07.014Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

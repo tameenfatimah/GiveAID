@@ -1,0 +1,29 @@
+﻿@using Project2.Models
+@model List<Product>
+
+@if (TempData["Message"] != null)
+{
+    <script>
+        alert('@TempData["Message"]');
+    </script>
+}
+
+<a href="@Url.Action("Insert", "Product")">Add New Product</a>
+
+<table border="1">
+    <tr>
+        <th>Product Id</th>
+        <th>Product Name</th>
+        <th>Product Description</th>
+        <th>Action</th>
+    </tr>
+    @foreach (Product pro in Model)
+    {
+        <tr>
+            <td>@pro.Id</td>
+            <td>@pro.Name</td>
+            <td>@pro.Description</td>
+            <td><a href="@Url.Action("Edit","Product",new {proid=pro.Id})">Update</a></td>
+        </tr>
+    }
+</table>

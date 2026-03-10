@@ -1,0 +1,91 @@
+﻿@model List<GiveAID.Models.Event>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Manage Events";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_2.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Dashboard", "Admin")">Dashboard</a></span>
+                    <span>Manage Events</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Manage Events</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success">@TempData["Success"]</div>
+        }
+
+        <div class="row justify-content-between align-items-center mb-4">
+            <div class="col-md-8 heading-section ftco-animate">
+                <span class="subheading">Admin Panel</span>
+                <h2>All Events</h2>
+            </div>
+            <div class="col-md-4 ftco-animate text-right">
+                <a href="@Url.Action("AddEvent", "Admin")" class="btn btn-primary py-2 px-4 mr-2">+ Add Event</a>
+                <a href="@Url.Action("Dashboard", "Admin")" class="btn btn-outline-primary py-2 px-4">&larr; Dashboard</a>
+            </div>
+        </div>
+
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr style="color:#f86f2d; font-family:'Dosis',sans-serif;">
+                                <th>#</th>
+                                <th>Title</th>
+                                <th>Category</th>
+                                <th>Location</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int count = 1;
+                            }
+                            @foreach (var e in Model)
+                            {
+                                <tr>
+                                    <td>@count</td>
+                                    <td><strong>@e.Title</strong></td>
+                                    <td>@e.Category</td>
+                                    <td>@e.Location</td>
+                                    <td>@e.EventDate.ToString("dd MMM yyyy")</td>
+                                    <td>
+                                        @if (e.IsUpcoming)
+                                        {
+                                            <span style="background:#f86f2d; color:#fff; padding:3px 10px; border-radius:30px; font-size:12px;">Upcoming</span>
+                                        }
+                                        else
+                                        {
+                                            <span style="background:gray; color:#fff; padding:3px 10px; border-radius:30px; font-size:12px;">Past</span>
+                                        }
+                                    </td>
+                                    <td>
+                                        <a href="@Url.Action("EditEvent", "Admin", new { id = e.EventId })" class="btn btn-outline-primary py-1 px-3 mr-1">Edit</a>
+                                        <a href="@Url.Action("DeleteEvent", "Admin", new { id = e.EventId })" class="btn btn-outline-primary py-1 px-3" onclick="return confirm('Delete this event?')">Delete</a>
+                                    </td>
+                                </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

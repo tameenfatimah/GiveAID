@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Faculties";
+}
+
+<div class="container faculty-page">
+
+    <h1 class="faculty-title">Our Faculties</h1>
+    <p class="faculty-subtitle">
+        Explore our diverse academic departments designed to inspire innovation and excellence.
+    </p>
+
+    <div class="faculty-grid">
+
+        <!-- Medical -->
+        <div class="faculty-card">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=60" class="faculty-img" />
+            <h3>Medical Faculty</h3>
+            <p>Leading medical research and healthcare education with modern facilities.</p>
+            <a asp-controller="Faculty" asp-action="Medical" class="faculty-link">Explore →</a>
+        </div>
+
+        <!-- Law -->
+        <div class="faculty-card">
+            <img src="https://images.unsplash.com/photo-1555374018-13a8994ab246?auto=format&fit=crop&w=800&q=60" class="faculty-img" />
+            <h3>Faculty of Law</h3>
+            <p>Developing future leaders in justice with strong academic foundations.</p>
+            <a asp-controller="Faculty" asp-action="Law" class="faculty-link">Explore →</a>
+        </div>
+
+        <!-- Engineering -->
+        <div class="faculty-card">
+            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=800&q=60" class="faculty-img" />
+            <h3>Engineering Faculty</h3>
+            <p>Innovative engineering programs that shape tomorrow’s technology.</p>
+            <a asp-controller="Faculty" asp-action="Engineering" class="faculty-link">Explore →</a>
+        </div>
+
+        <!-- Business -->
+        <div class="faculty-card">
+            <img src="https://images.unsplash.com/photo-1532619187604-89f6810c2c2a?auto=format&fit=crop&w=800&q=60" class="faculty-img" />
+            <h3>Business School</h3>
+            <p>Empowering students with entrepreneurship and leadership excellence.</p>
+            <a asp-controller="Faculty" asp-action="Business" class="faculty-link">Explore →</a>
+        </div>
+
+        <!-- Arts -->
+        <div class="faculty-card">
+            <img src="https://images.unsplash.com/photo-1505666287802-931dc83948e1?auto=format&fit=crop&w=800&q=60" class="faculty-img" />
+            <h3>Faculty of Arts</h3>
+            <p>Creative and cultural studies shaping the thinkers of tomorrow.</p>
+            <a asp-controller="Faculty" asp-action="Arts" class="faculty-link">Explore →</a>
+        </div>
+
+    </div>
+</div>

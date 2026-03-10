@@ -1,0 +1,123 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GiveAID</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,400i,600,700" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="@Url.Content("~/css/open-iconic-bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/animate.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/owl.carousel.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/owl.theme.default.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/magnific-popup.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/aos.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/ionicons.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/bootstrap-datepicker.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/jquery.timepicker.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/flaticon.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/icomoon.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/style.css")" />
+</head>
+<body>
+
+    @{
+        var currentController = ViewContext.RouteData.Values["controller"]?.ToString();
+        var currentAction = ViewContext.RouteData.Values["action"]?.ToString();
+        var loggedInUser = Context.Session.GetString("UserName");
+        var loggedInRole = Context.Session.GetString("UserRole");
+    }
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">GIVE-AID</a>
+
+            <button class="navbar-toggler" type="button"
+                    data-toggle="collapse"
+                    data-target="#ftco-nav"
+                    aria-controls="ftco-nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
+
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item @(currentAction == "Index" ? "active" : "")">
+                        <a class="nav-link" href="@Url.Action("Index", "Home")">Home</a>
+                    </li>
+
+                    <li class="nav-item @(currentAction == "About" ? "active" : "")">
+                        <a class="nav-link" href="@Url.Action("About", "Home")">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("NGOs", "Home")">Causes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Index", "Donation")">Donate</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Gallery", "Home")">Gallery</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Events", "Home")">Events</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("Contact", "Home")">Contact</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("HelpCentre", "Home")">Help</a>
+                    </li>
+
+                    @if (loggedInUser == null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Register", "User")">Register</a>
+                        </li>
+                        <li class="nav-item cta">
+                            <a class="nav-link" href="@Url.Action("Login", "User")"><span>Login</span></a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                @loggedInUser
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="@Url.Action("Profile", "User")">Profile</a>
+                                <a class="dropdown-item text-danger" href="@Url.Action("Logout", "User")">Logout</a>
+                            </div>
+                        </li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    @RenderBody()
+
+    <!-- JS -->
+    <script src="@Url.Content("~/js/jquery.min.js")"></script>
+    <script src="@Url.Content("~/js/jquery-migrate-3.0.1.min.js")"></script>
+    <script src="@Url.Content("~/js/popper.min.js")"></script>
+    <script src="@Url.Content("~/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/js/aos.js")"></script>
+    <script src="@Url.Content("~/js/main.js")"></script>
+
+</body>
+</html>

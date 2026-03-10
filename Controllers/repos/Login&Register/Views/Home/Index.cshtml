@@ -1,0 +1,9 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<h2>Welcome!</h2>
+
+<p>You are successfully logged in as: <strong>@Context.Session.GetString("UserEmail")</strong></p>
+
+<a href="@Url.Action("LogOut", "Home")">Click Here to Log-Out</a>

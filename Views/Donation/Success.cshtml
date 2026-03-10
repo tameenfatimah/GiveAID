@@ -1,0 +1,98 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Donation Successful";
+}
+
+<!-- ─── HERO BANNER ─── -->
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_4.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span>
+                    <span class="mr-2"><a href="@Url.Action("Index", "Donation")">Donate</a></span>
+                    <span>Thank You</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    Thank You!
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ─── SUCCESS CONTENT ─── -->
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-7 ftco-animate text-center">
+
+                @* BIG SUCCESS ICON *@
+                <div style="width:100px; height:100px; border-radius:50%;
+                            background:#f86f2d; margin:0 auto 30px auto;
+                            display:flex; align-items:center; justify-content:center;">
+                    <span class="icon-check" style="font-size:50px; color:#fff;"></span>
+                </div>
+
+                <div class="heading-section mb-4">
+                    <span class="subheading">Donation Received</span>
+                    <h2 class="mb-3">Your Generosity Matters!</h2>
+                </div>
+
+                @* DONATION SUMMARY BOX *@
+                <div style="background:#fff8f5; border:1px solid #f86f2d;
+                            border-radius:4px; padding:30px; margin-bottom:40px;">
+                    <p style="font-size:18px; color:#000; font-family:'Dosis',sans-serif; margin-bottom:10px;">
+                        You donated
+                        <span style="color:#f86f2d; font-size:26px; font-weight:700;">
+                            $@ViewBag.Amount
+                        </span>
+                        to
+                        <span style="color:#f86f2d; font-weight:600;">
+                            @ViewBag.Cause
+                        </span>
+                    </p>
+                    <p style="color:gray; margin:0;">
+                        Your contribution has been recorded. Together we are making a real difference.
+                    </p>
+                </div>
+
+                @* ACTION BUTTONS *@
+                <a href="@Url.Action("Index", "Donation")"
+                   class="btn btn-primary py-3 px-5 mr-3">
+                    Donate Again
+                </a>
+                <a href="@Url.Action("Profile", "User")"
+                   class="btn btn-outline-primary py-3 px-5 mr-3">
+                    View My Donations
+                </a>
+                <a href="@Url.Action("Index", "Home")"
+                   class="btn btn-outline-primary py-3 px-5">
+                    Back to Home
+                </a>
+
+            </div>
+        </div>
+    </div>
+</section>
+```
+
+---
+
+### ✅ DonationController — Complete Summary
+
+**Controller actions:**
+
+| Method | URL | What it does |
+|---|---|---|
+| GET | `/Donation/Index` | Shows donation form |
+| POST | `/Donation/Index` | Validates + saves donation |
+| GET | `/Donation/Success` | Thank you confirmation page |
+
+**Views:**
+```
+Views/
+  Donation/
+    Index.cshtml    ✅  Cause dropdown + card form + quick amounts
+    Success.cshtml  ✅  Thank you page with donation summary

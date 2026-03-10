@@ -1,0 +1,453 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\source\\repos\\pro\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\views\\academics\\admission.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\views\\academics\\admission.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\news\\newslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\news\\newslistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\news\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\news\\news.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\library\\librarycatalogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\library\\librarycatalogviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\library\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\library\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\events\\eventlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\events\\eventlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\events\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\events\\event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\contact\\contactinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\contact\\contactinfoviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\contact\\contactformmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\contact\\contactformmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\alumni\\alumnilistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\alumni\\alumnilistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\alumni\\alumni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\alumni\\alumni.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\academics\\undergraduate\\undergraduateprogramlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\academics\\undergraduate\\undergraduateprogramlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\academics\\undergraduate\\undergraduateprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\academics\\undergraduate\\undergraduateprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\academics\\postgraduate\\postgraduateprogramlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\academics\\postgraduate\\postgraduateprogramlistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\academics\\postgraduate\\postgraduateprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\academics\\postgraduate\\postgraduateprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\academics\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\academics\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\academics\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\academics\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\engineering\\engineeringfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\engineering\\engineeringfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\engineering\\engineeringfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\engineering\\engineeringfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\business\\businessfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\business\\businessfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\business\\businessfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\business\\businessfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\law\\lawfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\law\\lawfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\law\\lawfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\law\\lawfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\medical\\medicalfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\medical\\medicalfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\medical\\medicalfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\medical\\medicalfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\arts\\artsfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\arts\\artsfacultylistviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|c:\\users\\hp\\source\\repos\\pro\\pro\\models\\faculty\\arts\\artsfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C2F5B63-7C01-CEB5-CB48-88E3AF3F2BBD}|pro\\pro.csproj|solutionrelative:pro\\models\\faculty\\arts\\artsfaculty.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Admission.cshtml",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Views\\Academics\\Admission.cshtml",
+              "RelativeDocumentMoniker": "pro\\Views\\Academics\\Admission.cshtml",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Views\\Academics\\Admission.cshtml",
+              "RelativeToolTip": "pro\\Views\\Academics\\Admission.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-03T17:39:25.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NewsListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\News\\NewsListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\News\\NewsListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\News\\NewsListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\News\\NewsListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:34:42.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "News.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\News\\News.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\News\\News.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\News\\News.cs",
+              "RelativeToolTip": "pro\\Models\\News\\News.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:34:36.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LibraryCatalogViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Library\\LibraryCatalogViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Library\\LibraryCatalogViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Library\\LibraryCatalogViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Library\\LibraryCatalogViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:34:14.876Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Book.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Library\\Book.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Library\\Book.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Library\\Book.cs",
+              "RelativeToolTip": "pro\\Models\\Library\\Book.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:33:59.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EventListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Events\\EventListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Events\\EventListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Events\\EventListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Events\\EventListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:33:27.706Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Event.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Events\\Event.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Events\\Event.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Events\\Event.cs",
+              "RelativeToolTip": "pro\\Models\\Events\\Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:33:22.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ContactInfoViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Contact\\ContactInfoViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Contact\\ContactInfoViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Contact\\ContactInfoViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Contact\\ContactInfoViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:32:59.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ContactFormModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Contact\\ContactFormModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Contact\\ContactFormModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Contact\\ContactFormModel.cs",
+              "RelativeToolTip": "pro\\Models\\Contact\\ContactFormModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:32:41.195Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AlumniListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Alumni\\AlumniListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Alumni\\AlumniListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Alumni\\AlumniListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Alumni\\AlumniListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:32:13.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Alumni.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Alumni\\Alumni.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Alumni\\Alumni.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Alumni\\Alumni.cs",
+              "RelativeToolTip": "pro\\Models\\Alumni\\Alumni.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:31:55.855Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UndergraduateProgramListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Undergraduate\\UndergraduateProgramListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Academics\\Undergraduate\\UndergraduateProgramListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Undergraduate\\UndergraduateProgramListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Academics\\Undergraduate\\UndergraduateProgramListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:31:36.116Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UndergraduateProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Undergraduate\\UndergraduateProgram.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Academics\\Undergraduate\\UndergraduateProgram.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Undergraduate\\UndergraduateProgram.cs",
+              "RelativeToolTip": "pro\\Models\\Academics\\Undergraduate\\UndergraduateProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:31:23.211Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PostgraduateProgramListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Postgraduate\\PostgraduateProgramListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Academics\\Postgraduate\\PostgraduateProgramListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Postgraduate\\PostgraduateProgramListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Academics\\Postgraduate\\PostgraduateProgramListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:31:07.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PostgraduateProgram.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Postgraduate\\PostgraduateProgram.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Academics\\Postgraduate\\PostgraduateProgram.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Postgraduate\\PostgraduateProgram.cs",
+              "RelativeToolTip": "pro\\Models\\Academics\\Postgraduate\\PostgraduateProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:30:40.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Course.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Course.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Academics\\Course.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Course.cs",
+              "RelativeToolTip": "pro\\Models\\Academics\\Course.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:30:22.166Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Department.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Department.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Academics\\Department.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Academics\\Department.cs",
+              "RelativeToolTip": "pro\\Models\\Academics\\Department.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:30:10.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "EngineeringFacultyListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Engineering\\EngineeringFacultyListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Engineering\\EngineeringFacultyListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Engineering\\EngineeringFacultyListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Engineering\\EngineeringFacultyListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:29:32.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "EngineeringFaculty.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Engineering\\EngineeringFaculty.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Engineering\\EngineeringFaculty.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Engineering\\EngineeringFaculty.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Engineering\\EngineeringFaculty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:29:15.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "BusinessFacultyListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Business\\BusinessFacultyListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Business\\BusinessFacultyListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Business\\BusinessFacultyListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Business\\BusinessFacultyListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:28:40.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BusinessFaculty.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Business\\BusinessFaculty.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Business\\BusinessFaculty.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Business\\BusinessFaculty.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Business\\BusinessFaculty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:28:34.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "LawFacultyListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Law\\LawFacultyListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Law\\LawFacultyListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Law\\LawFacultyListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Law\\LawFacultyListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:27:59.386Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "LawFaculty.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Law\\LawFaculty.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Law\\LawFaculty.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Law\\LawFaculty.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Law\\LawFaculty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:27:49.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "MedicalFacultyListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Medical\\MedicalFacultyListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Medical\\MedicalFacultyListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Medical\\MedicalFacultyListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Medical\\MedicalFacultyListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:27:16.093Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "MedicalFaculty.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Medical\\MedicalFaculty.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Medical\\MedicalFaculty.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Medical\\MedicalFaculty.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Medical\\MedicalFaculty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:27:09.11Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ArtsFacultyListViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Arts\\ArtsFacultyListViewModel.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Arts\\ArtsFacultyListViewModel.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Arts\\ArtsFacultyListViewModel.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Arts\\ArtsFacultyListViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:26:20.36Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "ArtsFaculty.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Arts\\ArtsFaculty.cs",
+              "RelativeDocumentMoniker": "pro\\Models\\Faculty\\Arts\\ArtsFaculty.cs",
+              "ToolTip": "C:\\Users\\Hp\\source\\repos\\pro\\pro\\Models\\Faculty\\Arts\\ArtsFaculty.cs",
+              "RelativeToolTip": "pro\\Models\\Faculty\\Arts\\ArtsFaculty.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-03T17:26:01.409Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

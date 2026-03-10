@@ -1,0 +1,87 @@
+﻿@model List<GiveAID.Models.Donation>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Manage Donations";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_3.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Dashboard", "Admin")">Dashboard</a></span>
+                    <span>Manage Donations</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">All Donations</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+
+        <div class="row justify-content-between align-items-center mb-4">
+            <div class="col-md-8 heading-section ftco-animate">
+                <span class="subheading">Admin Panel</span>
+                <h2>All Donations</h2>
+            </div>
+            <div class="col-md-4 ftco-animate text-right">
+                <a href="@Url.Action("Dashboard", "Admin")" class="btn btn-outline-primary py-2 px-4">&larr; Dashboard</a>
+            </div>
+        </div>
+
+        @* TOTAL AMOUNT BANNER *@
+        <div class="row ftco-animate mb-5">
+            <div class="col-md-12">
+                <div class="text-center p-4"
+                     style="background:#f86f2d; border-radius:4px; color:#fff;">
+                    <h3 style="font-family:'Dosis',sans-serif; margin:0;">
+                        Total Amount Raised:
+                        <strong style="font-size:36px;">$@ViewBag.TotalAmount</strong>
+                    </h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr style="color:#f86f2d; font-family:'Dosis',sans-serif;">
+                                <th>#</th>
+                                <th>User ID</th>
+                                <th>Amount</th>
+                                <th>Cause</th>
+                                <th>Card Holder</th>
+                                <th>Card Type</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int count = 1;
+                            }
+                            @foreach (var d in Model)
+                            {
+                                <tr>
+                                    <td>@count</td>
+                                    <td>@d.UserId</td>
+                                    <td style="color:#f86f2d; font-weight:600;">$@d.Amount</td>
+                                    <td>@d.Cause</td>
+                                    <td>@d.CardHolder</td>
+                                    <td>@d.CardType</td>
+                                    <td>@d.DonationDate.ToString("dd MMM yyyy")</td>
+                                </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

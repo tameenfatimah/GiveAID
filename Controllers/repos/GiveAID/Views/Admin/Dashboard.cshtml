@@ -1,0 +1,158 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<!-- ─── HERO BANNER ─── -->
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_1.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span>
+                    <span>Admin Dashboard</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    Admin Dashboard
+                </h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ─── STATS CARDS ─── -->
+<section class="ftco-section">
+    <div class="container">
+
+        @* SUCCESS / ERROR MESSAGES *@
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success ftco-animate">@TempData["Success"]</div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger ftco-animate">@TempData["Error"]</div>
+        }
+
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-8 heading-section ftco-animate text-center">
+                <span class="subheading">Admin Panel</span>
+                <h2 class="mb-2">Welcome, @Context.Session.GetString("UserName")!</h2>
+                <p>Here is an overview of everything happening on Give-AID.</p>
+            </div>
+        </div>
+
+        @* ── STATS ROW 1 ── *@
+        <div class="row mb-4">
+            <div class="col-md-3 ftco-animate mb-4">
+                <div class="text-center p-4" style="background:#fff; border-radius:4px; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2); border-top:4px solid #f86f2d;">
+                    <span class="flaticon-user" style="font-size:40px; color:#f86f2d; display:block; margin-bottom:10px;"></span>
+                    <h2 style="font-family:'Dosis',sans-serif; color:#f86f2d; font-size:36px;">@ViewBag.TotalUsers</h2>
+                    <p style="color:gray; margin:0;">Registered Users</p>
+                    <a href="@Url.Action("ManageUsers", "Admin")" class="btn btn-primary py-2 px-4 mt-3">Manage</a>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate mb-4">
+                <div class="text-center p-4" style="background:#fff; border-radius:4px; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2); border-top:4px solid #f86f2d;">
+                    <span class="flaticon-donation" style="font-size:40px; color:#f86f2d; display:block; margin-bottom:10px;"></span>
+                    <h2 style="font-family:'Dosis',sans-serif; color:#f86f2d; font-size:36px;">@ViewBag.TotalDonations</h2>
+                    <p style="color:gray; margin:0;">Total Donations</p>
+                    <a href="@Url.Action("ManageDonations", "Admin")" class="btn btn-primary py-2 px-4 mt-3">Manage</a>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate mb-4">
+                <div class="text-center p-4" style="background:#fff; border-radius:4px; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2); border-top:4px solid #f86f2d;">
+                    <span class="flaticon-money" style="font-size:40px; color:#f86f2d; display:block; margin-bottom:10px;"></span>
+                    <h2 style="font-family:'Dosis',sans-serif; color:#f86f2d; font-size:36px;">$@ViewBag.TotalAmount</h2>
+                    <p style="color:gray; margin:0;">Total Amount Raised</p>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate mb-4">
+                <div class="text-center p-4" style="background:#fff; border-radius:4px; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2); border-top:4px solid #f86f2d;">
+                    <span class="flaticon-charity" style="font-size:40px; color:#f86f2d; display:block; margin-bottom:10px;"></span>
+                    <h2 style="font-family:'Dosis',sans-serif; color:#f86f2d; font-size:36px;">@ViewBag.TotalNGOs</h2>
+                    <p style="color:gray; margin:0;">NGOs Listed</p>
+                    <a href="@Url.Action("ManageNGOs", "Admin")" class="btn btn-primary py-2 px-4 mt-3">Manage</a>
+                </div>
+            </div>
+        </div>
+
+        @* ── STATS ROW 2 ── *@
+        <div class="row mb-5">
+            <div class="col-md-3 ftco-animate mb-4">
+                <div class="text-center p-4" style="background:#fff; border-radius:4px; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2); border-top:4px solid #f86f2d;">
+                    <h2 style="font-family:'Dosis',sans-serif; color:#f86f2d; font-size:36px;">@ViewBag.TotalEvents</h2>
+                    <p style="color:gray; margin:0;">Events</p>
+                    <a href="@Url.Action("ManageEvents", "Admin")" class="btn btn-primary py-2 px-4 mt-3">Manage</a>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate mb-4">
+                <div class="text-center p-4" style="background:#fff; border-radius:4px; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2); border-top:4px solid #f86f2d;">
+                    <h2 style="font-family:'Dosis',sans-serif; color:#f86f2d; font-size:36px;">@ViewBag.TotalPartners</h2>
+                    <p style="color:gray; margin:0;">Partners</p>
+                    <a href="@Url.Action("ManagePartners", "Admin")" class="btn btn-primary py-2 px-4 mt-3">Manage</a>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate mb-4">
+                <div class="text-center p-4" style="background:#fff; border-radius:4px; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2); border-top:4px solid #f86f2d;">
+                    <h2 style="font-family:'Dosis',sans-serif; color:#f86f2d; font-size:36px;">@ViewBag.PendingQueries</h2>
+                    <p style="color:gray; margin:0;">Pending Queries</p>
+                    <a href="@Url.Action("ManageQueries", "Admin")" class="btn btn-primary py-2 px-4 mt-3">Manage</a>
+                </div>
+            </div>
+            <div class="col-md-3 ftco-animate mb-4">
+                <div class="text-center p-4" style="background:#fff; border-radius:4px; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2); border-top:4px solid #f86f2d;">
+                    <h2 style="font-family:'Dosis',sans-serif; color:#f86f2d; font-size:36px;">@ViewBag.UnreadMessages</h2>
+                    <p style="color:gray; margin:0;">Unread Messages</p>
+                    <a href="@Url.Action("ManageMessages", "Admin")" class="btn btn-primary py-2 px-4 mt-3">Manage</a>
+                </div>
+            </div>
+        </div>
+
+        @* ── RECENT DONATIONS TABLE ── *@
+        <div class="row">
+            <div class="col-md-12 ftco-animate">
+                <div class="heading-section mb-4">
+                    <span class="subheading">Latest Activity</span>
+                    <h2>Recent Donations</h2>
+                </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr style="color:#f86f2d; font-family:'Dosis',sans-serif;">
+                                <th>#</th>
+                                <th>User ID</th>
+                                <th>Amount</th>
+                                <th>Cause</th>
+                                <th>Card Type</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int count = 1;
+                            }
+                            @foreach (var d in (List<GiveAID.Models.Donation>)ViewBag.RecentDonations)
+                            {
+                                <tr>
+                                    <td>@count</td>
+                                    <td>@d.UserId</td>
+                                    <td style="color:#f86f2d; font-weight:600;">$@d.Amount</td>
+                                    <td>@d.Cause</td>
+                                    <td>@d.CardType</td>
+                                    <td>@d.DonationDate.ToString("dd MMM yyyy")</td>
+                                </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <a href="@Url.Action("ManageDonations", "Admin")" class="btn btn-primary py-3 px-5">
+                    View All Donations
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>

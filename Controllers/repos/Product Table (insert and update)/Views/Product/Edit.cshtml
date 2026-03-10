@@ -1,0 +1,15 @@
+﻿@using Project2.Models
+@model Product
+
+<h3>Update Product</h3>
+
+<form onsubmit="@Url.Action("Edit","Product")" method="post">
+
+    <input type="text" name="proid" value="@Model.Id" hidden />
+    <br /><br />
+    <input type="text" name="txtname" value="@Model.Name" placeholder="Update Product Name"/>
+    <br /><br />
+    <input type="text" name="txtdesc" value="@Model.Description" placeholder="Update Product Description"/>
+    <br /><br />
+    <input type="submit" value="Update Product"/>
+</form>

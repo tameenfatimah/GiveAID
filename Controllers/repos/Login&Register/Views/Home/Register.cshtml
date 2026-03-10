@@ -1,0 +1,14 @@
+﻿@model Login_Register.Models.Users
+<h1>User Registration</h1>
+
+<form onsubmit="@Url.Action("Register", "Home")" method="post">
+    <input type="text" name="Name" placeholder="Enter your name" required />
+    <br /><br />
+    <input type="email" name="Email" placeholder="Enter your email" required />
+    <br /><br />
+    <input type="password" name="Password" placeholder="Enter your password" required />
+    <br /><br />
+    <input type="submit" value="Register" />
+</form>
+
+<p>Already have an account? <a href="@Url.Action("Login", "Home")">Log-in here</a></p>

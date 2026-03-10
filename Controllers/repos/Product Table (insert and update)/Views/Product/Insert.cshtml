@@ -1,0 +1,12 @@
+﻿@using Project2.Models;
+@model Product
+
+<form onsubmit="@Url.Action("Insert","Product")" method="post">
+    <input type="text" name="txtname" placeholder="Add Product" />
+    <br /><br />
+    <input type="text" name="txtdesc" placeholder="Write Product's Description" />
+    <br /><br />
+    <input type="submit" value="Add Product" />
+</form>
+<br>
+<a href="@Url.Action("Index", "Product")">View all products</a>

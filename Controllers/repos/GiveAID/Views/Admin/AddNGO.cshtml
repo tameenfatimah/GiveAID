@@ -1,0 +1,75 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Add NGO";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_4.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Dashboard", "Admin")">Dashboard</a></span>
+                    <span class="mr-2"><a href="@Url.Action("ManageNGOs", "Admin")">NGOs</a></span>
+                    <span>Add NGO</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Add New NGO</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-12 heading-section ftco-animate text-center">
+                        <span class="subheading">Admin Panel</span>
+                        <h2>Add New NGO</h2>
+                    </div>
+                </div>
+
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger ftco-animate">@ViewBag.Error</div>
+                }
+
+                <form method="post" action="@Url.Action("AddNGO", "Admin")"
+                      enctype="multipart/form-data" class="ftco-animate">
+
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">NGO Name *</label>
+                        <input type="text" name="name" class="form-control" placeholder="NGO Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Description</label>
+                        <textarea name="description" class="form-control" rows="4" placeholder="What does this NGO do?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Contact Email</label>
+                        <input type="email" name="contactEmail" class="form-control" placeholder="contact@ngo.com" />
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Contact Phone</label>
+                        <input type="text" name="contactPhone" class="form-control" placeholder="+1 234 567 890" />
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Website</label>
+                        <input type="text" name="website" class="form-control" placeholder="https://www.ngo.com" />
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Logo Image</label>
+                        <input type="file" name="logoFile" class="form-control" accept="image/*" />
+                    </div>
+                    <div class="form-group mt-4">
+                        <input type="submit" value="Add NGO" class="btn btn-primary py-3 px-5" />
+                        <a href="@Url.Action("ManageNGOs", "Admin")" class="btn btn-outline-primary py-3 px-4 ml-2">Cancel</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

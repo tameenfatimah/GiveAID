@@ -1,0 +1,74 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Our Mission";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_4.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span>
+                    <span class="mr-2"><a href="@Url.Action("About", "Home")">About</a></span>
+                    <span>Our Mission</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Our Mission</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 ftco-animate">
+                <div class="heading-section mb-4">
+                    <span class="subheading">Why We Exist</span>
+                    <h2 class="mb-4">Our Mission</h2>
+                </div>
+                <p>Our mission is to connect generous donors with verified NGOs, ensuring that every single donation reaches those who need it most — with full transparency and accountability.</p>
+                <p>We believe that poverty, lack of education and healthcare are not inevitable. With the right platform, resources and community — we can change millions of lives.</p>
+            </div>
+            <div class="col-md-6 ftco-animate">
+                <div class="heading-section mb-4">
+                    <span class="subheading">Where We Are Going</span>
+                    <h2 class="mb-4">Our Vision</h2>
+                </div>
+                <p>A world where no one is left behind — where every child has food, every person has access to healthcare, and every community has the tools to thrive and grow.</p>
+                <p>We envision Give-AID becoming the most trusted and impactful welfare platform in the region, connecting thousands of donors with hundreds of verified NGOs.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <span class="subheading">What Guides Us</span>
+                <h2 class="mb-4">Our Core Values</h2>
+            </div>
+        </div>
+        <div class="row">
+            @{
+                var values = new[] {
+                        new { icon="flaticon-donation-1", title="Transparency",  desc="We are fully transparent about how donations are used and where they go." },
+                        new { icon="flaticon-charity",    title="Compassion",    desc="Everything we do is driven by genuine compassion for those in need." },
+                        new { icon="flaticon-medal",      title="Accountability", desc="We hold ourselves and our partner NGOs to the highest standards." },
+                        new { icon="flaticon-donation",   title="Impact",        desc="We measure our success by the real impact we create in people's lives." },
+                        };
+            }
+            @foreach (var v in values)
+            {
+                <div class="col-md-3 ftco-animate text-center mb-4">
+                    <div class="p-4" style="border:1px solid #f2f2f2; border-radius:4px; background:#fff;">
+                        <span class="@v.icon" style="font-size:40px; color:#f86f2d; display:block; margin-bottom:15px;"></span>
+                        <h5 style="font-family:'Dosis',sans-serif;">@v.title</h5>
+                        <p style="color:gray; font-size:14px;">@v.desc</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

@@ -1,0 +1,102 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Achievements";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_7.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span>
+                    <span class="mr-2"><a href="@Url.Action("About", "Home")">About</a></span>
+                    <span>Achievements</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Our Achievements</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- COUNTER STATS -->
+<section class="ftco-counter ftco-intro" id="section-counter">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 color-1 align-items-stretch">
+                    <div class="text">
+                        <span>Children Helped</span>
+                        <strong class="number" data-number="14000">0</strong>
+                        <span>and counting</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 color-2 align-items-stretch">
+                    <div class="text">
+                        <span>NGOs Supported</span>
+                        <strong class="number" data-number="52">0</strong>
+                        <span>verified partners</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 color-3 align-items-stretch">
+                    <div class="text">
+                        <span>Volunteers</span>
+                        <strong class="number" data-number="3200">0</strong>
+                        <span>active members</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                <div class="block-18 color-1 align-items-stretch">
+                    <div class="text">
+                        <span>Events Held</span>
+                        <strong class="number" data-number="180">0</strong>
+                        <span>since launch</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section bg-light">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <span class="subheading">Our Milestones</span>
+                <h2 class="mb-4">What We Have Accomplished</h2>
+            </div>
+        </div>
+        <div class="row">
+            @{
+                var achievements = new[] {
+                        new { year="2021", title="Platform Launch",          desc="Give-AID officially launched connecting its first 10 NGOs with donors nationwide." },
+                        new { year="2022", title="1,000 Donors Milestone",   desc="We reached 1,000 registered donors and raised over $50,000 in our first full year." },
+                        new { year="2023", title="50 NGOs Onboarded",        desc="Expanded our network to over 50 verified NGOs across multiple welfare sectors." },
+                        new { year="2024", title="100+ Events Organized",    desc="Successfully organized over 100 community events, drives and awareness campaigns." },
+                        };
+            }
+            @foreach (var a in achievements)
+            {
+                <div class="col-md-6 ftco-animate mb-4">
+                    <div class="d-flex p-4" style="border:1px solid #f2f2f2; border-radius:4px; background:#fff;">
+                        <div class="mr-4">
+                            <div style="width:60px; height:60px; background:#f86f2d; border-radius:50%;
+                                            display:flex; align-items:center; justify-content:center;">
+                                <span style="color:#fff; font-family:'Dosis',sans-serif; font-weight:700; font-size:13px;">@a.year</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h5 style="font-family:'Dosis',sans-serif;">@a.title</h5>
+                            <p style="color:gray; font-size:14px; margin:0;">@a.desc</p>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

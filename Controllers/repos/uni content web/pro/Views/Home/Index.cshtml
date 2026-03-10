@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1>Welcome to IOAE University</h1>
+        <p>Empowering students with knowledge, innovation, and excellence.</p>
+        <a href="#" class="btn-hero">Apply Now</a>
+    </div>
+</div>
+
+<div class="container home-sections">
+
+    <h2 class="section-title">Quick Access</h2>
+
+    <div class="card-grid">
+
+        <div class="info-card">
+            <h3>Admissions</h3>
+            <p>Explore undergraduate and postgraduate admissions.</p>
+            <a asp-controller="Academics" asp-action="Admission" class="card-link">Learn More →</a>
+        </div>
+
+        <div class="info-card">
+            <h3>Faculties</h3>
+            <p>Discover our world-class academic departments.</p>
+            <a asp-controller="Faculty" asp-action="Faculty" class="card-link">Explore →</a>
+        </div>
+
+        <div class="info-card">
+            <h3>Library</h3>
+            <p>Access thousands of books, journals, and digital resources.</p>
+            <a asp-controller="Library" asp-action="Library" class="card-link">Visit Library →</a>
+        </div>
+
+        <div class="info-card">
+            <h3>Contact Us</h3>
+            <p>We’re here to help you with admissions or general queries.</p>
+            <a asp-controller="Contact" asp-action="Contact" class="card-link">Get in Touch →</a>
+        </div>
+
+    </div>
+</div>

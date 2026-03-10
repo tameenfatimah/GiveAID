@@ -1,0 +1,60 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Career";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_6.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span>
+                    <span>Career</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Career</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <span class="subheading">Join Our Team</span>
+                <h2 class="mb-4">Work With Give-AID</h2>
+                <p>We are always looking for passionate, talented people who want to make a difference.</p>
+            </div>
+        </div>
+        <div class="row">
+            @{
+                var jobs = new[] {
+                        new { title="Community Outreach Officer",    type="Full Time",  desc="Build and manage relationships with NGOs and community partners across the region." },
+                        new { title="Web Developer",                 type="Part Time",  desc="Help us maintain and improve our platform to serve donors and NGOs better." },
+                        new { title="Marketing Coordinator",         type="Full Time",  desc="Plan and execute digital marketing campaigns to raise awareness for our causes." },
+                        new { title="Volunteer Coordinator",         type="Internship", desc="Manage our volunteer database and match volunteers with appropriate NGO programmes." },
+                        };
+            }
+            @foreach (var j in jobs)
+            {
+                <div class="col-md-6 ftco-animate mb-4">
+                    <div class="p-4" style="border:1px solid #f2f2f2; border-radius:4px; background:#fff; box-shadow:0px 3px 66px -24px rgba(0,0,0,0.1);">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <h5 style="font-family:'Dosis',sans-serif; margin:0;">@j.title</h5>
+                            <span style="background:#f86f2d; color:#fff; padding:3px 12px; border-radius:30px; font-size:12px;">@j.type</span>
+                        </div>
+                        <p style="color:gray; font-size:14px; margin-bottom:15px;">@j.desc</p>
+                        <a href="@Url.Action("Contact", "Home")" class="btn btn-outline-primary py-2 px-4">Apply Now</a>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row mt-3 justify-content-center ftco-animate">
+            <div class="col-md-7 text-center">
+                <p style="color:gray;">Don't see a role that fits? Send us your CV anyway!</p>
+                <a href="@Url.Action("Contact", "Home")" class="btn btn-primary py-3 px-5">Contact Us</a>
+            </div>
+        </div>
+    </div>
+</section>

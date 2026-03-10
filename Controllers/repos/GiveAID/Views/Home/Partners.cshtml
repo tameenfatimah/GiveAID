@@ -1,0 +1,65 @@
+﻿@model List<GiveAID.Models.Partner>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Our Partners";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_2.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">
+                    <span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span>
+                    <span>Partners</span>
+                </p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Our Partners</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <span class="subheading">Who Supports Us</span>
+                <h2 class="mb-2">Our Partner Companies</h2>
+                <p>These organisations work alongside Give-AID to maximise our collective impact.</p>
+            </div>
+        </div>
+
+        @if (Model != null && Model.Count > 0)
+        {
+            <div class="row">
+                @foreach (var p in Model)
+                {
+                    <div class="col-md-3 ftco-animate mb-4 text-center">
+                        <div class="p-4" style="border:1px solid #f2f2f2; border-radius:4px;
+                                                        box-shadow:0px 3px 66px -24px rgba(0,0,0,0.2);">
+                            <img src="@p.LogoPath" alt="@p.CompanyName"
+                                 style="width:100px; height:100px; object-fit:contain; margin-bottom:15px;" />
+                            <h5 style="font-family:'Dosis',sans-serif;">@p.CompanyName</h5>
+                            <p style="color:gray; font-size:13px;">@p.Description</p>
+                            @if (!string.IsNullOrEmpty(p.Website))
+                            {
+                                <a href="@p.Website" target="_blank" style="color:#f86f2d; font-size:13px;">
+                                    Visit Website
+                                </a>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="row justify-content-center ftco-animate">
+                <div class="col-md-7 text-center">
+                    <p style="color:gray;">No partners listed yet. Check back soon!</p>
+                    <a href="@Url.Action("Index", "Home")" class="btn btn-primary py-3 px-5">Back to Home</a>
+                </div>
+            </div>
+        }
+    </div>
+</section>

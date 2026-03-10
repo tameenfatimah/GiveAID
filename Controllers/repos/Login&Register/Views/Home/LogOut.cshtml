@@ -1,0 +1,12 @@
+﻿@model Login_Register.Models.Users
+
+@{
+    ViewData["Title"] = "Logout";
+}
+
+<h2>Logged Out Successfully!</h2>
+
+<p>You have been logged out. Your session has been cleared.</p>
+
+<a href="@Url.Action("Login", "Home")">Log-in Again</a><br /><br />
+<a href="@Url.Action("Register", "Home")">Register New Account</a>

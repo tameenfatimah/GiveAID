@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Hp\\source\\repos\\Practice\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF8B0330-7894-4E5D-B1AD-01BF5BCDB327}|Practice.csproj|c:\\users\\hp\\onedrive\\documents\\vsc22\\oop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OOP.cs",
+              "DocumentMoniker": "C:\\Users\\Hp\\OneDrive\\Documents\\VSC22\\OOP.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\OneDrive\\Documents\\VSC22\\OOP.cs",
+              "ToolTip": "C:\\Users\\Hp\\OneDrive\\Documents\\VSC22\\OOP.cs*",
+              "RelativeToolTip": "..\\..\\..\\OneDrive\\Documents\\VSC22\\OOP.cs*",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvxsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-12T11:12:47.889Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
