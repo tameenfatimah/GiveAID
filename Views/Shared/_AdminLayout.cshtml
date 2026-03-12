@@ -1,0 +1,189 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - GiveAID</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/open-iconic-bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/dashboard.css")" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 240px;
+            min-height: 100vh;
+            background: #1a1a2e;
+            display: flex;
+            flex-direction: column;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 100;
+            overflow-y: auto;
+        }
+
+        .sidebar-brand {
+            padding: 24px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+            .sidebar-brand h2 {
+                color: #f86f2d;
+                font-size: 22px;
+                font-weight: 800;
+            }
+
+            .sidebar-brand p {
+                color: rgba(255,255,255,0.4);
+                font-size: 11px;
+                margin-top: 2px;
+            }
+
+        .sidebar-menu {
+            padding: 12px 0;
+            flex: 1;
+        }
+
+        .menu-label {
+            padding: 10px 20px 4px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: rgba(255,255,255,0.3);
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            text-decoration: none;
+            transition: all 0.2s;
+            border-left: 3px solid transparent;
+        }
+
+            .menu-item:hover {
+                background: rgba(248,111,45,0.1);
+                color: #fff;
+                border-left-color: #f86f2d;
+                text-decoration: none;
+            }
+
+            .menu-item.active {
+                background: rgba(248,111,45,0.15);
+                color: #f86f2d;
+                border-left-color: #f86f2d;
+                font-weight: 600;
+            }
+
+        .menu-icon {
+            font-size: 14px;
+            width: 18px;
+            text-align: center;
+        }
+
+        .sidebar-footer {
+            padding: 14px 20px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            color: rgba(255,255,255,0.3);
+            font-size: 11px;
+        }
+
+        .main {
+            margin-left: 240px;
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .topbar {
+            background: #fff;
+            padding: 14px 28px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+        }
+
+            .topbar h1 {
+                font-size: 18px;
+                font-weight: 700;
+                color: #1a1a2e;
+            }
+
+        .admin-badge {
+            background: #f86f2d;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .content {
+            padding: 28px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2>GIVE-AID</h2>
+            <p>Admin Panel</p>
+        </div>
+        <nav class="sidebar-menu">
+            <div class="menu-label">Main</div>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin")"><span class="menu-icon">📊</span> Dashboard</a>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin", new { show = "users" })"><span class="menu-icon">👥</span> Manage Users</a>
+            <div class="menu-label">Content</div>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin", new { show = "ngos" })"><span class="menu-icon">🏢</span> Manage NGOs</a>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin", new { show = "partners" })"><span class="menu-icon">🤝</span> Manage Partners</a>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin", new { show = "events" })"><span class="menu-icon">📅</span> Manage Events</a>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin", new { show = "gallery" })"><span class="menu-icon">🖼️</span> Manage Gallery</a>
+            <a class="menu-item" href="@Url.Action("UploadImage", "Admin")"><span class="menu-icon">⬆️</span> Upload Image</a>
+            <div class="menu-label">Activity</div>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin", new { show = "donations" })"><span class="menu-icon">💰</span> Manage Donations</a>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin", new { show = "queries" })"><span class="menu-icon">❓</span> Manage Queries</a>
+            <a class="menu-item" href="@Url.Action("Dashboard", "Admin", new { show = "messages" })"><span class="menu-icon">✉️</span> Manage Messages</a>
+            <div class="menu-label">Account</div>
+            <a class="menu-item" href="@Url.Action("Index", "Home")"><span class="menu-icon">🏠</span> Back to Site</a>
+            <a class="menu-item" href="@Url.Action("Logout", "User")"><span class="menu-icon">🚪</span> Logout</a>
+        </nav>
+        <div class="sidebar-footer">Give-AID &copy; 2026</div>
+    </div>
+
+    <div class="main">
+        <div class="topbar">
+            <h1>@ViewData["Title"]</h1>
+            <div>
+                <a href="@Url.Action("Index", "Home")" class="topbar-link" style="color:#888; font-size:13px; text-decoration:none; padding:6px 12px; border-radius:4px; border:1px solid #eee;">← Back to Site</a>
+                <span class="admin-badge">@Context.Session.GetString("UserName")</span>
+            </div>
+        </div>
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

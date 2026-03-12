@@ -1,0 +1,71 @@
+﻿@model GiveAID.Models.User
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Edit Profile";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_4.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center">
+                <p class="breadcrumbs"><span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span><span class="mr-2"><a href="@Url.Action("Profile", "User")">Profile</a></span><span>Edit Profile</span></p>
+                <h1 class="mb-3 bread">Edit Profile</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-7">
+
+                <div class="row justify-content-center mb-5">
+                    <div class="col-md-12 heading-section ftco-animate text-center">
+                        <span class="subheading">Your Account</span>
+                        <h2 class="mb-2">Update Your Information</h2>
+                        <p>Keep your profile details up to date.</p>
+                    </div>
+                </div>
+
+                @if (ViewBag.Success != null)
+                {
+                    <div class="alert alert-success">@ViewBag.Success</div>
+                }
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+
+                <form method="post" action="@Url.Action("EditProfile","User")" class="ftco-animate">
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Full Name *</label>
+                        <input type="text" name="name" class="form-control" value="@Model.Name" placeholder="Full Name" required />
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Email Address</label>
+                        <input type="email" class="form-control" value="@Model.Email" disabled />
+                        <small style="color:gray;">Email address cannot be changed.</small>
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Phone Number *</label>
+                        <input type="text" name="phone" class="form-control" value="@Model.Phone" placeholder="Phone Number" required />
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Home Address</label>
+                        <textarea name="address" class="form-control" rows="3" placeholder="Your home address">@Model.Address</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Profession</label>
+                        <input type="text" name="profession" class="form-control" value="@Model.Profession" placeholder="e.g. Engineer, Teacher, Doctor" />
+                    </div>
+                    <div class="form-group mt-4">
+                        <input type="submit" value="Save Changes" class="btn btn-primary py-3 px-5" />
+                        <a href="@Url.Action("Profile", "User")" class="btn btn-outline-primary py-3 px-4 ml-2">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

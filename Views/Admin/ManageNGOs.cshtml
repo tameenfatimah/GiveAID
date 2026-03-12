@@ -1,0 +1,66 @@
+﻿@model List<GiveAID.Models.NGO>
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Manage NGOs";
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+<div class="row justify-content-between align-items-center mb-4">
+    <div class="col-md-8 heading-section">
+        <span class="subheading">Admin Panel</span>
+        <h2>All NGOs</h2>
+    </div>
+    <div class="col-md-4  text-right">
+        <a href="@Url.Action("AddNGO", "Admin")" class="btn btn-primary py-2 px-4 mr-2">+ Add NGO</a>
+        <a href="@Url.Action("Dashboard", "Admin")" class="btn btn-outline-primary py-2 px-4">&larr; Dashboard</a>
+    </div>
+</div>
+
+<div class="row ">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr style="color:#f86f2d; font-family:'Dosis',sans-serif;">
+                        <th>#</th>
+                        <th>Logo</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int count = 1;
+                    }
+                    @foreach (var n in Model)
+                    {
+                        <tr>
+                            <td>@count</td>
+                            <td><img src="@n.LogoPath" style="width:50px; height:50px; object-fit:cover; border-radius:50%;" /></td>
+                            <td><strong>@n.Name</strong></td>
+                            <td>@n.ContactEmail</td>
+                            <td>@n.ContactPhone</td>
+                            <td>@(n.IsActive ? "Active" : "Inactive")</td>
+                            <td>
+                                <a href="@Url.Action("EditNGO", "Admin", new { id = n.NGOId })" class="btn btn-outline-primary py-1 px-3 mr-1">Edit</a>
+                                <a href="@Url.Action("DeleteNGO", "Admin", new { id = n.NGOId })" class="btn btn-outline-primary py-1 px-3" onclick="return confirm('Delete this NGO?')">Delete</a>
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

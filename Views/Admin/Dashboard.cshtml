@@ -1,0 +1,544 @@
+﻿@{
+    Layout = null;
+    ViewData["Title"] = "Admin Dashboard";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - GiveAID</title>
+    <link rel="stylesheet" href="@Url.Content("~/css/open-iconic-bootstrap.min.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/style.css")" />
+    <link rel="stylesheet" href="@Url.Content("~/css/dashboard.css")" />
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <div class="sidebar-brand">
+            <h2>GIVE-AID</h2>
+            <p>Admin Panel</p>
+        </div>
+        <nav class="sidebar-menu">
+            <div class="menu-label">Main</div>
+            <button class="menu-item active" id="link-dashboard" onclick="showDashboard()">
+                <span class="menu-icon">📊</span> Dashboard
+            </button>
+            <button class="menu-item" id="link-users" onclick="showTable('users', 'link-users')">
+                <span class="menu-icon">👥</span> Manage Users
+            </button>
+
+            <div class="menu-label">Content</div>
+            <button class="menu-item" id="link-ngos" onclick="showTable('ngos', 'link-ngos')">
+                <span class="menu-icon">🏢</span> Manage NGOs
+            </button>
+            <button class="menu-item" id="link-partners" onclick="showTable('partners', 'link-partners')">
+                <span class="menu-icon">🤝</span> Manage Partners
+            </button>
+            <button class="menu-item" id="link-events" onclick="showTable('events', 'link-events')">
+                <span class="menu-icon">📅</span> Manage Events
+            </button>
+            <button class="menu-item" id="link-gallery" onclick="showTable('gallery', 'link-gallery')">
+                <span class="menu-icon">🖼️</span> Manage Gallery
+            </button>
+            <a class="menu-item" href="@Url.Action("UploadImage", "Admin")">
+                <span class="menu-icon">⬆️</span> Upload Image
+            </a>
+
+            <div class="menu-label">Activity</div>
+            <button class="menu-item" id="link-donations" onclick="showTable('donations', 'link-donations')">
+                <span class="menu-icon">💰</span> Manage Donations
+            </button>
+            <button class="menu-item" id="link-queries" onclick="showTable('queries', 'link-queries')">
+                <span class="menu-icon">❓</span> Manage Queries
+            </button>
+            <button class="menu-item" id="link-messages" onclick="showTable('messages', 'link-messages')">
+                <span class="menu-icon">✉️</span> Manage Messages
+            </button>
+
+            <div class="menu-label">Account</div>
+            <a class="menu-item" href="@Url.Action("Index", "Home")">
+                <span class="menu-icon">🏠</span> Back to Site
+            </a>
+            <a class="menu-item" href="@Url.Action("Logout", "User")">
+                <span class="menu-icon">🚪</span> Logout
+            </a>
+        </nav>
+        <div class="sidebar-footer">Give-AID &copy; 2026</div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main">
+        <div class="topbar">
+            <h1>Dashboard Overview</h1>
+            <div class="topbar-links">
+                <a href="@Url.Action("Index", "Home")" class="topbar-link">← Back to Site</a>
+                <span class="admin-badge">@Context.Session.GetString("UserName")</span>
+            </div>
+        </div>
+
+        <div class="content">
+
+            @if (TempData["Success"] != null)
+            {
+                <div class="alert alert-success">@TempData["Success"]</div>
+            }
+            @if (TempData["Error"] != null)
+            {
+                <div class="alert alert-danger">@TempData["Error"]</div>
+            }
+
+            <!-- STATS SECTION -->
+            <div id="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">@ViewBag.TotalUsers</div>
+                        <div class="stat-label">Registered Users</div>
+                        <button class="stat-btn" onclick="showTable('users', 'link-users')">Manage</button>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">@ViewBag.TotalDonations</div>
+                        <div class="stat-label">Total Donations</div>
+                        <button class="stat-btn" onclick="showTable('donations', 'link-donations')">Manage</button>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">Rs.@ViewBag.TotalAmount</div>
+                        <div class="stat-label">Total Amount Raised</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">@ViewBag.TotalNGOs</div>
+                        <div class="stat-label">NGOs Listed</div>
+                        <button class="stat-btn" onclick="showTable('ngos', 'link-ngos')">Manage</button>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">@ViewBag.TotalEvents</div>
+                        <div class="stat-label">Events</div>
+                        <button class="stat-btn" onclick="showTable('events', 'link-events')">Manage</button>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">@ViewBag.TotalPartners</div>
+                        <div class="stat-label">Partners</div>
+                        <button class="stat-btn" onclick="showTable('partners', 'link-partners')">Manage</button>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">@ViewBag.TotalGallery</div>
+                        <div class="stat-label">Gallery Images</div>
+                        <button class="stat-btn" onclick="showTable('gallery', 'link-gallery')">Manage</button>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">@ViewBag.PendingQueries</div>
+                        <div class="stat-label">Pending Queries</div>
+                        <button class="stat-btn" onclick="showTable('queries', 'link-queries')">Manage</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECENT DONATIONS -->
+            <div id="recent-donations">
+                <div class="table-card">
+                    <div class="table-header">
+                        <h3>Recent Donations</h3>
+                        <a class="view-all" onclick="showTable('donations', 'link-donations')">View All →</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>User ID</th>
+                                <th>Amount</th>
+                                <th>Cause</th>
+                                <th>Card Type</th>
+                                <th>Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                int count = 1;
+                            }
+                            @foreach (var d in (List<GiveAID.Models.Donation>)ViewBag.RecentDonations)
+                            {
+                                <tr>
+                                    <td>@count</td>
+                                    <td>@d.UserId</td>
+                                    <td class="amount">Rs.@d.Amount</td>
+                                    <td>@d.Cause</td>
+                                    <td><span class="badge-green">@d.CardType</span></td>
+                                    <td>@d.DonationDate.ToString("dd MMM yyyy")</td>
+                                </tr>
+                                count++;
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- MANAGE SECTION -->
+            <div id="manage-section" style="display:none;">
+                <button class="back-btn" onclick="showDashboard()">← Back to Dashboard</button>
+
+                <!-- users -->
+                <div id="table-users" class="manage-table" style="display:none;">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <p class="manage-table-title">All Registered Users</p>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Role</th>
+                                    <th>Registered</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int u1 = 1;
+                                }
+                                @foreach (var u in (List<GiveAID.Models.User>)ViewBag.Users)
+                                {
+                                    <tr>
+                                        <td>@u1</td>
+                                        <td>@u.Name</td>
+                                        <td>@u.Email</td>
+                                        <td>@u.Phone</td>
+                                        <td>@u.Role</td>
+                                        <td>@u.RegisteredAt.ToString("dd MMM yyyy")</td>
+                                        <td>
+                                            <a href="@Url.Action("DeleteUser", "Admin", new { id = u.UserId })"
+                                               class="btn btn-outline-primary py-1 px-2"
+                                               onclick="return confirm('Delete this user?')">Delete</a>
+                                        </td>
+                                    </tr>
+                                    u1++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ngos -->
+                <div id="table-ngos" class="manage-table" style="display:none;">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <p class="manage-table-title">All NGOs</p>
+                            <a href="@Url.Action("AddNGO", "Admin")" class="btn btn-primary py-2 px-4">+ Add NGO</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Logo</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int n1 = 1;
+                                }
+                                @foreach (var n in (List<GiveAID.Models.NGO>)ViewBag.NGOs)
+                                {
+                                    <tr>
+                                        <td>@n1</td>
+                                        <td><img src="@n.LogoPath" style="width:40px; height:40px; object-fit:cover; border-radius:50%;" /></td>
+                                        <td>@n.Name</td>
+                                        <td>@n.ContactEmail</td>
+                                        <td>@n.ContactPhone</td>
+                                        <td>@(n.IsActive ? "Active" : "Inactive")</td>
+                                        <td>
+                                            <a href="@Url.Action("EditNGO", "Admin", new { id = n.NGOId })"
+                                               class="btn btn-outline-primary py-1 px-2">Edit</a>
+                                            <a href="@Url.Action("DeleteNGO", "Admin", new { id = n.NGOId })"
+                                               class="btn btn-outline-primary py-1 px-2"
+                                               onclick="return confirm('Delete this NGO?')">Delete</a>
+                                        </td>
+                                    </tr>
+                                    n1++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- events -->
+                <div id="table-events" class="manage-table" style="display:none;">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <p class="manage-table-title">All Events</p>
+                            <a href="@Url.Action("AddEvent", "Admin")" class="btn btn-primary py-2 px-4">+ Add Event</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Title</th>
+                                    <th>Category</th>
+                                    <th>Location</th>
+                                    <th>Date</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int e1 = 1;
+                                }
+                                @foreach (var e in (List<GiveAID.Models.Event>)ViewBag.Events)
+                                {
+                                    <tr>
+                                        <td>@e1</td>
+                                        <td>@e.Title</td>
+                                        <td>@e.Category</td>
+                                        <td>@e.Location</td>
+                                        <td>@e.EventDate.ToString("dd MMM yyyy")</td>
+                                        <td>@(e.IsUpcoming ? "Upcoming" : "Past")</td>
+                                        <td>
+                                            <a href="@Url.Action("EditEvent", "Admin", new { id = e.EventId })"
+                                               class="btn btn-outline-primary py-1 px-2">Edit</a>
+                                            <a href="@Url.Action("DeleteEvent", "Admin", new { id = e.EventId })"
+                                               class="btn btn-outline-primary py-1 px-2"
+                                               onclick="return confirm('Delete this event?')">Delete</a>
+                                        </td>
+                                    </tr>
+                                    e1++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- partners -->
+                <div id="table-partners" class="manage-table" style="display:none;">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <p class="manage-table-title">All Partners</p>
+                            <a href="@Url.Action("AddPartner", "Admin")" class="btn btn-primary py-2 px-4">+ Add Partner</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Logo</th>
+                                    <th>Company</th>
+                                    <th>Website</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int p1 = 1;
+                                }
+                                @foreach (var p in (List<GiveAID.Models.Partner>)ViewBag.Partners)
+                                {
+                                    <tr>
+                                        <td>@p1</td>
+                                        <td><img src="@p.LogoPath" style="width:40px; height:40px; object-fit:cover; border-radius:50%;" /></td>
+                                        <td>@p.CompanyName</td>
+                                        <td>@p.Website</td>
+                                        <td>@(p.IsActive ? "Active" : "Inactive")</td>
+                                        <td>
+                                            <a href="@Url.Action("EditPartner", "Admin", new { id = p.PartnerId })"
+                                               class="btn btn-outline-primary py-1 px-2">Edit</a>
+                                            <a href="@Url.Action("DeletePartner", "Admin", new { id = p.PartnerId })"
+                                               class="btn btn-outline-primary py-1 px-2"
+                                               onclick="return confirm('Delete this partner?')">Delete</a>
+                                        </td>
+                                    </tr>
+                                    p1++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- donations view only -->
+                <div id="table-donations" class="manage-table" style="display:none;">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <p class="manage-table-title">All Donations</p>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>User ID</th>
+                                    <th>Amount</th>
+                                    <th>Cause</th>
+                                    <th>Card Type</th>
+                                    <th>Date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int d1 = 1;
+                                }
+                                @foreach (var d in (List<GiveAID.Models.Donation>)ViewBag.Donations)
+                                {
+                                    <tr>
+                                        <td>@d1</td>
+                                        <td>@d.UserId</td>
+                                        <td class="amount">Rs.@d.Amount</td>
+                                        <td>@d.Cause</td>
+                                        <td>@d.CardType</td>
+                                        <td>@d.DonationDate.ToString("dd MMM yyyy")</td>
+                                    </tr>
+                                    d1++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- queries -->
+                <div id="table-queries" class="manage-table" style="display:none;">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <p class="manage-table-title">All User Queries</p>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Subject</th>
+                                    <th>Message</th>
+                                    <th>Status</th>
+                                    <th>Submitted</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int q1 = 1;
+                                }
+                                @foreach (var q in (List<GiveAID.Models.Query>)ViewBag.Queries)
+                                {
+                                    <tr>
+                                        <td>@q1</td>
+                                        <td>@q.Subject</td>
+                                        <td>@q.Message</td>
+                                        <td>@(q.IsRepliedAt ? "Replied" : "Pending")</td>
+                                        <td>@q.SubmittedAt.ToString("dd MMM yyyy")</td>
+                                        <td>
+                                            @if (!q.IsRepliedAt)
+                                            {
+                                                <a href="@Url.Action("ReplyQuery", "Admin", new { id = q.QueryId })"
+                                                   class="btn btn-outline-primary py-1 px-2">Reply</a>
+                                            }
+                                        </td>
+                                    </tr>
+                                    q1++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- messages -->
+                <div id="table-messages" class="manage-table" style="display:none;">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <p class="manage-table-title">All Contact Messages</p>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Subject</th>
+                                    <th>Status</th>
+                                    <th>Received</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int m1 = 1;
+                                }
+                                @foreach (var m in (List<GiveAID.Models.ContactMessage>)ViewBag.Messages)
+                                {
+                                    <tr>
+                                        <td>@m1</td>
+                                        <td>@m.FullName</td>
+                                        <td>@m.guestEmail</td>
+                                        <td>@m.Subject</td>
+                                        <td>@(m.IsRead ? "Read" : "New")</td>
+                                        <td>@m.SubmittedAt.ToString("dd MMM yyyy")</td>
+                                        <td>
+                                            @if (!m.IsRead)
+                                            {
+                                                <a href="@Url.Action("MarkAsRead", "Admin", new { id = m.ContactMessageId })"
+                                                   class="btn btn-outline-primary py-1 px-2">Mark Read</a>
+                                            }
+                                            <a href="@Url.Action("DeleteMessage", "Admin", new { id = m.ContactMessageId })"
+                                               class="btn btn-outline-primary py-1 px-2"
+                                               onclick="return confirm('Delete this message?')">Delete</a>
+                                        </td>
+                                    </tr>
+                                    m1++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- gallery -->
+                <div id="table-gallery" class="manage-table" style="display:none;">
+                    <div class="table-card">
+                        <div class="table-header">
+                            <p class="manage-table-title">All Gallery Images</p>
+                            <a href="@Url.Action("UploadImage", "Admin")" class="btn btn-primary py-2 px-4">+ Upload Image</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Caption</th>
+                                    <th>Category</th>
+                                    <th>Uploaded</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    int g1 = 1;
+                                }
+                                @foreach (var g in (List<GiveAID.Models.Gallery>)ViewBag.Gallery)
+                                {
+                                    <tr>
+                                        <td>@g1</td>
+                                        <td>@g.Caption</td>
+                                        <td>@g.Category</td>
+                                        <td>@g.UploadedAt.ToString("dd MMM yyyy")</td>
+                                        <td>
+                                            <a href="@Url.Action("DeleteImage", "Admin", new { id = g.GalleryId })"
+                                               class="btn btn-outline-primary py-1 px-2"
+                                               onclick="return confirm('Delete this image?')">Delete</a>
+                                        </td>
+                                    </tr>
+                                    g1++;
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="@Url.Content("~/js/dashboard.js")"></script>
+</body>
+</html>

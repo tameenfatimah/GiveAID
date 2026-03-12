@@ -1,0 +1,63 @@
+﻿@model List<GiveAID.Models.Donation>
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Manage Donations";
+}
+
+<div class="row justify-content-between align-items-center mb-4">
+    <div class="col-md-8 heading-section">
+        <span class="subheading">Admin Panel</span>
+        <h2>All Donations</h2>
+    </div>
+    <div class="col-md-4  text-right">
+        <a href="@Url.Action("Dashboard", "Admin")" class="btn btn-outline-primary py-2 px-4">&larr; Dashboard</a>
+    </div>
+</div>
+
+<div class="row  mb-4">
+    <div class="col-md-12">
+        <div class="text-center p-4" style="background:#f86f2d; border-radius:4px; color:#fff;">
+            <h3 style="font-family:'Dosis',sans-serif; margin:0;">
+                Total Amount Raised: <strong style="font-size:36px;">Rs.@ViewBag.TotalAmount</strong>
+            </h3>
+        </div>
+    </div>
+</div>
+
+<div class="row ">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr style="color:#f86f2d; font-family:'Dosis',sans-serif;">
+                        <th>#</th>
+                        <th>User ID</th>
+                        <th>Amount</th>
+                        <th>Cause</th>
+                        <th>Card Holder</th>
+                        <th>Card Type</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int count = 1;
+                    }
+                    @foreach (var d in Model)
+                    {
+                        <tr>
+                            <td>@count</td>
+                            <td>@d.UserId</td>
+                            <td style="color:#f86f2d; font-weight:600;">Rs.@d.Amount</td>
+                            <td>@d.Cause</td>
+                            <td>@d.CardHolder</td>
+                            <td>@d.CardType</td>
+                            <td>@d.DonationDate.ToString("dd MMM yyyy")</td>
+                        </tr>
+                        count++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

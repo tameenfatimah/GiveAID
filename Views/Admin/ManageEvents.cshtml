@@ -1,0 +1,62 @@
+﻿@model List<GiveAID.Models.Event>
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Manage Events";
+}
+
+@if (TempData["Success"] != null)
+{
+    <div class="alert alert-success">@TempData["Success"]</div>
+}
+
+<div class="row justify-content-between align-items-center mb-4">
+    <div class="col-md-8 heading-section">
+        <span class="subheading">Admin Panel</span>
+        <h2>All Events</h2>
+    </div>
+    <div class="col-md-4  text-right">
+        <a href="@Url.Action("AddEvent", "Admin")" class="btn btn-primary py-2 px-4 mr-2">+ Add Event</a>
+        <a href="@Url.Action("Dashboard", "Admin")" class="btn btn-outline-primary py-2 px-4">&larr; Dashboard</a>
+    </div>
+</div>
+
+<div class="row ">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr style="color:#f86f2d; font-family:'Dosis',sans-serif;">
+                        <th>#</th>
+                        <th>Title</th>
+                        <th>Category</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int count = 1;
+                    }
+                    @foreach (var e in Model)
+                    {
+                        <tr>
+                            <td>@count</td>
+                            <td><strong>@e.Title</strong></td>
+                            <td>@e.Category</td>
+                            <td>@e.Location</td>
+                            <td>@e.EventDate.ToString("dd MMM yyyy")</td>
+                            <td>@(e.IsUpcoming ? "Upcoming" : "Past")</td>
+                            <td>
+                                <a href="@Url.Action("EditEvent", "Admin", new { id = e.EventId })" class="btn btn-outline-primary py-1 px-3 mr-1">Edit</a>
+                                <a href="@Url.Action("DeleteEvent", "Admin", new { id = e.EventId })" class="btn btn-outline-primary py-1 px-3" onclick="return confirm('Delete this event?')">Delete</a>
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

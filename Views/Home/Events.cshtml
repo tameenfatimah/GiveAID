@@ -1,0 +1,55 @@
+﻿@model List<GiveAID.Models.Event>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Events";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_1.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center">
+                <p class="breadcrumbs"><span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span> <span>Events</span></p>
+                <h1 class="mb-3 bread">Events</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+            @if (Model != null && Model.Count > 0)
+            {
+                @foreach (var ev in Model)
+                {
+                    <div class="col-md-4 d-flex ftco-animate">
+                        <div class="blog-entry align-self-stretch">
+                            <a href="@Url.Action("Events", "Home")" class="block-20"
+                               style="background-image: url('@ev.ImagePath');">
+                            </a>
+                            <div class="text p-4 d-block">
+                                <div class="meta mb-3">
+                                    <div><a href="#">@ev.EventDate.ToString("MMM. dd, yyyy")</a></div>
+                                    <div><a href="#">@ev.Category</a></div>
+                                </div>
+                                <h3 class="heading mb-4"><a href="#">@ev.Title</a></h3>
+                                <p class="time-loc">
+                                    <span class="mr-2"><i class="icon-clock-o"></i> @ev.Location</span>
+                                </p>
+                                <p>@ev.Description</p>
+                                <p><a href="@Url.Action("Events", "Home")">Join Event <i class="ion-ios-arrow-forward"></i></a></p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12 text-center">
+                    <p>No events available at the moment. Please check back soon!</p>
+                </div>
+            }
+        </div>
+    </div>
+</section>

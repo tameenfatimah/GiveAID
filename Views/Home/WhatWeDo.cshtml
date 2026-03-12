@@ -1,0 +1,91 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "What We Do";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_3.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span><span class="mr-2"><a href="@Url.Action("About", "Home")">About</a></span><span>What We Do</span></p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">What We Do</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <span class="subheading">Our Work</span>
+                <h2 class="mb-4">How Give-AID Makes a Difference</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 d-flex services p-3 py-4 d-block">
+                    <div class="icon d-flex mb-3"><span class="flaticon-donation-1"></span></div>
+                    <div class="media-body pl-4">
+                        <h3 class="heading">Fundraising</h3>
+                        <p>We raise funds for verified NGOs working in education, healthcare, children welfare and more.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 d-flex services p-3 py-4 d-block">
+                    <div class="icon d-flex mb-3"><span class="flaticon-charity"></span></div>
+                    <div class="media-body pl-4">
+                        <h3 class="heading">NGO Support</h3>
+                        <p>We provide verified NGOs with a digital presence, donor connections and operational support.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 d-flex services p-3 py-4 d-block">
+                    <div class="icon d-flex mb-3"><span class="flaticon-donation"></span></div>
+                    <div class="media-body pl-4">
+                        <h3 class="heading">Community Events</h3>
+                        <p>We organize events, drives and programmes that bring communities together for a common good.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 d-flex services p-3 py-4 d-block">
+                    <div class="icon d-flex mb-3"><span class="flaticon-user"></span></div>
+                    <div class="media-body pl-4">
+                        <h3 class="heading">Volunteer Programs</h3>
+                        <p>We connect passionate volunteers with NGOs that need their time, skills and energy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 d-flex services p-3 py-4 d-block">
+                    <div class="icon d-flex mb-3"><span class="flaticon-medal"></span></div>
+                    <div class="media-body pl-4">
+                        <h3 class="heading">Awareness Campaigns</h3>
+                        <p>We run awareness campaigns to educate the public about social issues that need attention.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 d-flex services p-3 py-4 d-block">
+                    <div class="icon d-flex mb-3"><span class="flaticon-family"></span></div>
+                    <div class="media-body pl-4">
+                        <h3 class="heading">Family Support</h3>
+                        <p>We work with families in crisis, providing emergency food, shelter and counselling services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5 justify-content-center ftco-animate">
+            <div class="col-md-12 text-center">
+                <a href="@Url.Action("Index", "Donation")" class="btn btn-primary py-3 px-5 mr-3">Donate Now</a>
+                <a href="@Url.Action("Events", "Home")" class="btn btn-outline-primary py-3 px-5">View Events</a>
+            </div>
+        </div>
+    </div>
+</section>

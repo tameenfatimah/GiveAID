@@ -1,0 +1,115 @@
+﻿@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Help Centre";
+}
+
+<div class="hero-wrap" style="background-image: url('@Url.Content("~/images/bg_6.jpg")');" data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center" data-scrollax-parent="true">
+            <div class="col-md-7 ftco-animate text-center" data-scrollax="properties: { translateY: '70%' }">
+                <p class="breadcrumbs" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }"><span class="mr-2"><a href="@Url.Action("Index", "Home")">Home</a></span><span>Help Centre</span></p>
+                <h1 class="mb-3 bread" data-scrollax="properties: { translateY: '30%', opacity: 1.6 }">Help Centre</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-6 pr-md-5 ftco-animate">
+                <div class="heading-section mb-5">
+                    <span class="subheading">We Are Here to Help</span>
+                    <h2 class="mb-3">Submit Your Query</h2>
+                    <p>Have a question? Fill in the form below and our team will reply shortly.</p>
+                </div>
+                @if (ViewBag.SuccessMessage != null)
+                {
+                    <div class="alert alert-success">@ViewBag.SuccessMessage</div>
+                }
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger">@ViewBag.Error</div>
+                }
+                @if (Context.Session.GetInt32("UserId") != null)
+                {
+                    <form method="post" action="@Url.Action("HelpCentre", "Home")">
+                        <div class="form-group">
+                            <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Subject *</label>
+                            <input type="text" name="subject" class="form-control" placeholder="What is your query about?" required />
+                        </div>
+                        <div class="form-group">
+                            <label style="color:#f86f2d; font-family:'Dosis',sans-serif;">Message *</label>
+                            <textarea name="message" class="form-control" rows="7" placeholder="Describe your query in detail..." required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Submit Query" class="btn btn-primary py-3 px-5" />
+                        </div>
+                    </form>
+                    <a href="@Url.Action("MyQueries", "User")" class="btn btn-outline-primary py-2 px-4 mt-2">View My Past Queries</a>
+                }
+                else
+                {
+                    <div style="background:#fff8f5; border-left:4px solid #f86f2d; padding:20px 25px; border-radius:0 4px 4px 0;">
+                        <h5 style="font-family:'Dosis',sans-serif; color:#f86f2d;">Login Required</h5>
+                        <p style="color:gray;">You must be logged in to submit a query.</p>
+                        <a href="@Url.Action("Login", "User")" class="btn btn-primary py-2 px-4 mr-2">Login</a>
+                        <a href="@Url.Action("Register", "User")" class="btn btn-outline-primary py-2 px-4">Register</a>
+                    </div>
+                }
+            </div>
+
+            <div class="col-md-6 ftco-animate">
+                <div class="heading-section mb-5">
+                    <span class="subheading">Other Ways to Reach Us</span>
+                    <h2 class="mb-3">Contact Information</h2>
+                </div>
+                <div class="d-flex mb-4">
+                    <div class="mr-4">
+                        <span class="icon-map-marker" style="font-size:30px; color:#f86f2d;"></span>
+                    </div>
+                    <div>
+                        <h5 style="font-family:'Dosis',sans-serif;">Our Address</h5>
+                        <p style="color:gray;">Office 203, Welfare Street Clifton Block 5 Karachi Pakistan</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <div class="mr-4">
+                        <span class="icon-phone" style="font-size:30px; color:#f86f2d;"></span>
+                    </div>
+                    <div>
+                        <h5 style="font-family:'Dosis',sans-serif;">Phone Number</h5>
+                        <p style="color:gray;">+92 21 3748 5962</p>
+                    </div>
+                </div>
+                <div class="d-flex mb-4">
+                    <div class="mr-4">
+                        <span class="icon-envelope" style="font-size:30px; color:#f86f2d;"></span>
+                    </div>
+                    <div>
+                        <h5 style="font-family:'Dosis',sans-serif;">Email Address</h5>
+                        <p style="color:gray;">giveaidproject2026@gmail.com</p>
+                    </div>
+                </div>
+                <div class="heading-section mb-3 mt-4">
+                    <span class="subheading">Quick Answers</span>
+                    <h4>Frequently Asked Questions</h4>
+                </div>
+                <div class="mb-3" style="border-bottom:1px solid #f2f2f2; padding-bottom:15px;">
+                    <h6 style="font-family:'Dosis',sans-serif;">How do I make a donation?</h6>
+                    <p style="color:gray; font-size:14px; margin:0;">Register, log in and visit the Donate page to choose your cause and amount.</p>
+                </div>
+                <div class="mb-3" style="border-bottom:1px solid #f2f2f2; padding-bottom:15px;">
+                    <h6 style="font-family:'Dosis',sans-serif;">Is my donation secure?</h6>
+                    <p style="color:gray; font-size:14px; margin:0;">Yes. All donation records are securely stored in our system.</p>
+                </div>
+                <div class="mb-3">
+                    <h6 style="font-family:'Dosis',sans-serif;">How long does a reply take?</h6>
+                    <p style="color:gray; font-size:14px; margin:0;">Our team typically replies within 24-48 hours on working days.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
